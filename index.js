@@ -44,6 +44,10 @@ var createServer = function (e, opts) {
     e.files[index].select()
     server.index = e.files[index]
 
+    if (opts["sort-playlist"]) {
+      e.files.sort((file1, file2) => file1.path.localeCompare(file2.path))
+    }
+
     if (opts.sort) e.files.sort(opts.sort)
   }
 

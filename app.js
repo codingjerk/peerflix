@@ -48,6 +48,7 @@ var argv = rc('peerflix', {}, optimist
   .describe('on-downloaded', 'script to call when file is 100% downloaded')
   .describe('on-listening', 'script to call when server goes live')
   .describe('version', 'prints current version').boolean('boolean')
+  .describe('sort-playlist', 'sort .m3u playlist').boolean('boolean')
   .argv)
 
 if (argv.version) {
