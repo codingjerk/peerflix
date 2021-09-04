@@ -223,14 +223,16 @@ var ontorrent = function (torrent) {
     var paused = false
     var timePaused = 0
     var pausedAt = null
+    var playlistName = engine.torrent.infoHash + '.m3u'
 
     VLC_ARGS += ' --meta-title="' + filename.replace(/"/g, '\\"') + '"'
 
     if (argv.all) {
       filename = engine.torrent.name
       filelength = engine.torrent.length
-      href += '.m3u'
-      localHref += '.m3u'
+
+      href += playlistName
+      localHref += playlistName
     }
 
     var registry = function (hive, key, name, cb) {

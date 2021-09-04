@@ -131,7 +131,7 @@ var createServer = function (e, opts) {
       return
     }
 
-    if (u.pathname === '/.m3u') {
+    if (u.pathname === '/' + e.torrent.infoHash + '.m3u') {
       var playlist = toPlaylist()
       response.setHeader('Content-Type', 'application/x-mpegurl; charset=utf-8')
       response.setHeader('Content-Length', Buffer.byteLength(playlist))
