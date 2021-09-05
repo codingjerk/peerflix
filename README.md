@@ -2,6 +2,8 @@
 
 Streaming torrent client for Node.js
 
+**Fork of https://github.com/mafintosh/peerflix**
+
 ```
 npm install -g peerflix
 ```
